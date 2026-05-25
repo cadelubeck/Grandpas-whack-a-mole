@@ -190,4 +190,20 @@ button:hover {
         padding: 14px;
         box-shadow: 0 14px 30px rgba(0,0,0,0.25);
     }
+    .scroll-hint {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 8px 0 4px;
+        color: rgba(255,255,255,0.92);
+        font-size: 0.96rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        background: rgba(0, 0, 0, 0.18);
+        position: fixed;
+        bottom: 78px;
+        left: 0;
+        right: 0;
+        z-index: 15;
+    }
 }
