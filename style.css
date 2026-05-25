@@ -148,10 +148,15 @@ button:hover {
         box-shadow: none;
         border-radius: 18px;
         margin: 12px auto 18px;
-        max-height: calc(100vh - 140px);
-        overflow: hidden;
+        max-height: none;
+        overflow: visible;
+    }
+    .overlay {
+        position: static;
     }
     .screen {
+        position: relative;
+        inset: auto;
         padding: 16px 16px 18px;
         place-items: start center;
         align-items: start;
