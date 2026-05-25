@@ -137,7 +137,7 @@ button:hover {
 }
 @media (max-width: 800px) {
     body {
-        padding: 18px 12px 180px;
+        padding: 12px 10px 170px;
         justify-content: flex-start;
         align-items: stretch;
         overflow-y: auto;
@@ -147,24 +147,33 @@ button:hover {
         max-width: 100%;
         box-shadow: none;
         border-radius: 18px;
-        margin: 16px auto 20px;
+        margin: 12px auto 18px;
         max-height: calc(100vh - 140px);
         overflow: hidden;
     }
     .screen {
-        padding: 24px 20px 20px;
+        padding: 16px 16px 18px;
         place-items: start center;
         align-items: start;
     }
+    .screen h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+    .screen p,
+    .info-grid {
+        font-size: 0.95rem;
+    }
     .info-grid {
         grid-template-columns: 1fr;
+        gap: 8px;
     }
     canvas {
-        max-height: calc(100vh - 360px);
+        max-height: calc(100vh - 340px);
     }
     button {
-        font-size: 1.05rem;
-        padding: 16px 24px;
+        font-size: 1rem;
+        padding: 14px 22px;
     }
     .touch-controls {
         position: fixed;
