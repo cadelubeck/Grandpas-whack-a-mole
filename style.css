@@ -140,6 +140,7 @@ button:hover {
         padding: 18px 12px 180px;
         justify-content: flex-start;
         align-items: stretch;
+        overflow-y: auto;
     }
     .page-shell {
         width: 100%;
@@ -147,9 +148,13 @@ button:hover {
         box-shadow: none;
         border-radius: 18px;
         margin: 16px auto 20px;
+        max-height: calc(100vh - 140px);
+        overflow: hidden;
     }
     .screen {
-        padding: 20px;
+        padding: 24px 20px 20px;
+        place-items: start center;
+        align-items: start;
     }
     .info-grid {
         grid-template-columns: 1fr;
