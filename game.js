@@ -123,6 +123,7 @@ function nextLevel() {
     resetLevel();
     state.screen = 'playing';
     messageScreen.classList.add('hidden');
+    touchControls.classList.remove('hidden');
     requestAnimationFrame(gameLoop);
 }
 
@@ -645,5 +646,24 @@ function handleTouchButton(button) {
 }
 
 document.querySelectorAll('#touchControls .touch-btn').forEach(handleTouchButton);
+
+window.addEventListener('pointerup', () => {
+    Object.keys(keys).forEach(key => {
+        keys[key] = false;
+    });
+});
+window.addEventListener('pointercancel', () => {
+    Object.keys(keys).forEach(key => {
+        keys[key] = false;
+    });
+});
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        Object.keys(keys).forEach(key => {
+            keys[key] = false;
+        });
+    }
+});
 
 render();
