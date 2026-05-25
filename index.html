@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Dirt Mole Smash</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="page-shell">
+        <canvas id="gameCanvas" width="1280" height="720"></canvas>
+        <div id="uiOverlay" class="overlay">
+            <div id="menuScreen" class="screen active">
+                <h1>Red Dirt Mole Smash</h1>
+                <p>Run around the dirt field and smash moles that pop out of the red dirt patches.</p>
+                <div class="info-grid">
+                    <div><strong>Move:</strong> Arrow Keys</div>
+                    <div><strong>Attack:</strong> Spacebar</div>
+                    <div><strong>Dynamite:</strong> Shift</div>
+                    <div><strong>Mobile:</strong> On-screen arrows + Hit + Boom</div>
+                </div>
+                <button id="startButton">Start Game</button>
+                <p class="small">Complete all 4 levels or reach the end score before time runs out.</p>
+            </div>
+            <div id="messageScreen" class="screen hidden">
+                <h2 id="messageTitle"></h2>
+                <p id="messageText"></p>
+                <button id="continueButton">Continue</button>
+            </div>
+        </div>
+        </div>
+        <div id="touchControls" class="touch-controls hidden" aria-label="Touch controls">
+            <div class="dpad">
+                <button class="touch-btn arrow up" data-key="ArrowUp" aria-label="Move up">▲</button>
+                <button class="touch-btn arrow left" data-key="ArrowLeft" aria-label="Move left">◀</button>
+                <button class="touch-btn arrow down" data-key="ArrowDown" aria-label="Move down">▼</button>
+                <button class="touch-btn arrow right" data-key="ArrowRight" aria-label="Move right">▶</button>
+            </div>
+            <div class="action-pad">
+                <button class="touch-btn action hit" data-key="Space">Hit</button>
+                <button class="touch-btn action dynamite" data-key="ShiftLeft">Boom</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
